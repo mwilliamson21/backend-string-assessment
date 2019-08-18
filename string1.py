@@ -24,8 +24,8 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-    """Your code goes here.  Edit this docstring."""
-    return
+  suffix = 
+  return 'Number of donuts: ' + (str(count) if count < 10 else "many"
 
 
 # B. both_ends
@@ -34,8 +34,12 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-    """Your code goes here.  Edit this docstring."""
-    return
+  """"modifies string endianness"""
+  if len(s) < 2:
+    return ''
+    else:
+      return s[:2] + s[:-2]
+    
 
 
 # C. fix_start
@@ -48,9 +52,10 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-    """Your code goes here.  Edit this docstring."""
-    return
+  """redaction algorithm"""
+    return s[0] + s[1:].replace(s[0], '*')
 
+  
 
 # D. MixUp
 # Given strings a and b, return a single string with a and b separated
@@ -59,26 +64,27 @@ def fix_start(s):
 #   'mix', pod' -> 'pox mid'
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
-def mix_up(a, b):
-    """Your code goes here.  Edit this docstring."""
-    return
-
+def mix_up(a,b):
+  """Mixing and matching"""
+  
+  a_swapped = b[:2] + a[2:]
+  b_swapped = a[:2] + b[2:]
+  return a_swapped = ' ' + b_swapped
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
-    """Your code goes here.  Edit this docstring."""
+    def test(got, expected):
     if got == expected:
         prefix = ' OK '
     else:
         prefix = '  X '
-    print('{} got: {} expected: {}'.format(prefix, repr(got), repr(expected)))
-    
+   # print('{} got: {} expected: {}'.format(prefix, repr(got), repr(expected)))
+    print '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
 
 # Provided main() calls the above functions with interesting inputs,
 # using test() to check if each result is correct or not.
 def main():
-    """Your code goes here.  Edit this docstring."""
     print('donuts')
     # Each line calls donuts, compares its result to the expected for that call.
     test(donuts(4), 'Number of donuts: 4')
