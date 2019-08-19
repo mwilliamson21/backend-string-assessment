@@ -15,7 +15,7 @@
 # It's ok if you do not complete all the functions, and there
 # are some additional functions to try in string2.py.
 
-
+# review this one
 # A. donuts
 # Given an int count of a number of donuts, return a string
 # of the form 'Number of donuts: <count>', where <count> is the number
@@ -23,8 +23,10 @@
 # instead of the actual count.
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
+
+
 def donuts(count):
-  suffix = 
+  suffix =
   return 'Number of donuts: ' + (str(count) if count < 10 else "many"
 
 
@@ -39,7 +41,7 @@ def both_ends(s):
     return ''
     else:
       return s[:2] + s[:-2]
-    
+
 
 
 # C. fix_start
@@ -55,7 +57,7 @@ def fix_start(s):
   """redaction algorithm"""
     return s[0] + s[1:].replace(s[0], '*')
 
-  
+
 
 # D. MixUp
 # Given strings a and b, return a single string with a and b separated
@@ -64,21 +66,21 @@ def fix_start(s):
 #   'mix', pod' -> 'pox mid'
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
-def mix_up(a,b):
+def mix_up(a, b):
   """Mixing and matching"""
-  
-  a_swapped = b[:2] + a[2:]
-  b_swapped = a[:2] + b[2:]
-  return a_swapped = ' ' + b_swapped
+
+  a_swapped=b[:2] + a[2:]
+  b_swapped=a[:2] + b[2:]
+  return a_swapped=' ' + b_swapped
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
     def test(got, expected):
     if got == expected:
-        prefix = ' OK '
+        prefix=' OK '
     else:
-        prefix = '  X '
+        prefix='  X '
    # print('{} got: {} expected: {}'.format(prefix, repr(got), repr(expected)))
     print '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
 
