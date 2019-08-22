@@ -20,12 +20,12 @@
 def verbing(s):
     """verbing a string"""
     #only do verbing on strings longer than 3
-   if len(s) >= 3:
-     if s.endswith("ing"):
-       s = s + 'ly'
-     else:
-          s = s + "ing"  
-   return s
+    if len(s) >= 3:
+        if s.endswith("ing"):
+            s += 'ly'
+        else:
+            s += "ing"  
+    return s
 
 
 # E. not_bad
@@ -37,14 +37,11 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    
-  
-  n = s.find('not')
-  b = s.find('bad')
-  if n != -1 and b!= -1 and n < b:
-     return s[0:n] + 'good' +s[b + 3:]
-  return s
-  
+    n = s.find('not')
+    b = s.find('bad')
+    if n != -1 and b!= -1 and n < b:
+        return s[0:n] + 'good' +s[b + 3:]
+    return s
 
 
 # F. front_back
@@ -71,9 +68,8 @@ def test(got, expected):
         prefix = ' OK '
     else:
         prefix = '  X '
-    #print('{} got: {} expected: {}'.format(prefix, repr(got), repr(expected)))
-    print '%s got: %s expected: %s' % (prefix, repr(got), repr(expected))
-
+    print('{} got: {} expected: {}'.format(prefix, repr(got), repr(expected)))
+    
 
 
 # main() calls the above functions with interesting inputs,
